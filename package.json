@@ -10,7 +10,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/NtsDK/measurelook-plot-demo"
+    "url": "https://github.com/NtsDK/measurelook-plot-demo"
   },
   "dependencies": {
     "iconv-lite": "^0.4.19",
