@@ -19,23 +19,23 @@
 
 # Структура проекта
 
-config - настройки запуска
-measures - исходные данные для построения графиков
-pdfs - папка с pdf
-plots 
-    index.js - запуск формирования графика
-    performanceData2_2.js - сборка данных для графика
-    printDataPreprocessor.js - переиспользуемая доработка данных для графиков
-pngs - папка с png
-svgs - папка с svg
-templates - шаблон построения графика на R
-utils
-    databaseLoader.js - загрузчик экспериментальных данных в память
-    dataExtractor.js - извлечение отдельных параметров из данных экспериментов
-    generateHtml.js - генератор pic-preview.html
-    runR.js - запуск R скрипта из JavaScript 
-app.js - точка входа
-pic-preview.html - предпросмотр получившихся svg графиков в браузере
+- config - настройки запуска
+- measures - исходные данные для построения графиков
+- pdfs - папка с pdf
+- plots 
+    - index.js - запуск формирования графика
+    - performanceData2_2.js - сборка данных для графика
+    - printDataPreprocessor.js - переиспользуемая доработка данных для графиков
+- pngs - папка с png
+- svgs - папка с svg
+- templates - шаблон построения графика на R
+- utils
+    - databaseLoader.js - загрузчик экспериментальных данных в память
+    - dataExtractor.js - извлечение отдельных параметров из данных экспериментов
+    - generateHtml.js - генератор pic-preview.html
+    - runR.js - запуск R скрипта из JavaScript 
+- app.js - точка входа
+- pic-preview.html - предпросмотр получившихся svg графиков в браузере
 
 # Использование линтеров
 
