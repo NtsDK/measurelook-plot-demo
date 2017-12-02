@@ -39,10 +39,10 @@
 
 # Использование линтеров
 
-eclint check 
-eclint fix 
+    eclint check 
+    eclint fix 
 
-"node_modules/.bin/eslint" app.js --fix
-"node_modules/.bin/eslint" plots --fix
-"node_modules/.bin/eslint" utils --fix
-"node_modules/.bin/eslint" config --fix
+    "node_modules/.bin/eslint" app.js --fix
+    "node_modules/.bin/eslint" plots --fix
+    "node_modules/.bin/eslint" utils --fix
+    "node_modules/.bin/eslint" config --fix
