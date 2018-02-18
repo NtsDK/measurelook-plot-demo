@@ -1,43 +1,44 @@
-# О проекте
+# About project ([README Rus](https://github.com/NtsDK/measurelook-plot-demo/wiki/README-RUS))
 
-В этом проекте приведен реальный пример формирования графика для научной статьи из файлов экспериментов Measurelook с 
-помощью Inkscape и R.
+This repo contains real example of building chart for scientific article using Measurelook file with Inkscape and R. 
 
-Порядок работы:
-1. Данные считываются и преобразуются.
-2. Преобразованные данные подаются на вход шаблонизатору и на выходе получается R программа построения svg графика.
-3. R программа исполняется. Получаются svg файлы.
-4. Формируется pic-preview.html из svg для предварительного просмотра в браузере.
-5. (необязательно) svg преобразуются в png и pdf с помощью Inkscape
+How it works:
+1. Data is readed and prepared.
+2. Prepared data is passed it templater input (Mustache) and templater output returns R program to build SVG chart.
+3. R executes program. You recieve SVG files.
+4. Generated pic-preview.html with SVGs links to quick preview in browser.
+5. (optional) SVG processes in PNG and PDF with Inkscape
 
-# Установка и запуск
+Note: This repo contains Implementation-1 of image builder. I have a revised Implementation-2 which is more reusable but it is not published yet.
 
-0. Скачать репозиторий
+# Intall and run
+
+0. Download repo
 1. npm i
-2. Поправить config\config.json - заменить пути к R (обязательно) и Inkscape (необязательно, если не будет конвертации svg->png и svg->pdf) 
+2. Fix config\config.json - change path to R (required) and Inkscape (only if you need convert svg->png and svg->pdf) 
 3. node app.js
 
-# Структура проекта
+# Project structure
 
-- config - настройки запуска
-- measures - исходные данные для построения графиков
-- pdfs - папка с pdf
+- config - run settings
+- measures - folder with Measurelook data files
+- pdfs - PDF folder
 - plots 
-    - index.js - запуск формирования графика
-    - performanceData2_2.js - сборка данных для графика
-    - printDataPreprocessor.js - переиспользуемая доработка данных для графиков
-- pngs - папка с png
-- svgs - папка с svg
-- templates - шаблон построения графика на R
+    - index.js - starter of chart building
+    - performanceData2_2.js - preparing data for chart
+    - printDataPreprocessor.js - reusable chart data postprocessing
+- pngs - PNG folder
+- svgs - SVG folder
+- templates - R templates folder
 - utils
-    - databaseLoader.js - загрузчик экспериментальных данных в память
-    - dataExtractor.js - извлечение отдельных параметров из данных экспериментов
-    - generateHtml.js - генератор pic-preview.html
-    - runR.js - запуск R скрипта из JavaScript 
-- app.js - точка входа
-- pic-preview.html - предпросмотр получившихся svg графиков в браузере
+    - databaseLoader.js - reader of Measurelook files
+    - dataExtractor.js - tracks extractor 
+    - generateHtml.js - pic-preview.html generator
+    - runR.js - running of R script from JavaScript 
+- app.js - application starter
+- pic-preview.html - preview SVGs in browser
 
-# Использование линтеров
+# Linters usage
 
     eclint check 
     eclint fix 
